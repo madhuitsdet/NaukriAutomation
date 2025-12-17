@@ -1,3 +1,4 @@
+import json
 import time
 from time import sleep
 from datetime import datetime
@@ -20,20 +21,24 @@ from NaukriAppPOM.LoginPage import Loginpage
 # from NaukriAppPOM.JobFreshnessSelection import Jobfreshness_selection
 from pytest_html.report import Report
 
+Jsonpath = "C:\\Users\\vangam\Gitstuff_New\\NaukriAutomation\\NaukriAppPOM\\data\\test_NaukriAppParameterized.json"
+with open(Jsonpath) as f:
+    test_data = json.load(f)
+    test_list = test_data["data"]
 
-
-def test_TestCase_01(test_browser):
+@pytest.mark.parametrize("test_list_item", test_list)
+def test_TestCase_01(test_browser, test_list_item):
     driver = test_browser
     loginpage = Loginpage(driver)
-    homeprofilepage = loginpage.login("madhuitsdet@gmail.com", "Madhu@2000")
+    homeprofilepage = loginpage.login(test_list_item["userEmail"], test_list_item["userpassword"])
     # homeprofilepage = Homeprofilepage(driver)
-    resumeheadlines = homeprofilepage.homeprofile("C:\\Python38-32\\PythonProject\\NaukriApp\\data\\Madhu_Vanga_SDET_v2.pdf")
+    resumeheadlines = homeprofilepage.homeprofile(test_list_item["resume_file_pass"])
     # resumeheadlines = Resumeheadlines(driver)
-    jobsearch = resumeheadlines.resumeheadlines("#Quality Assurance Engineer #Automation test Engineer # functional testing #Performance testing | 4 Years of Expertise in Manual, Automated testing, pytest & Performance testing | Ensuring Robust Software Solutions")
+    jobsearch = resumeheadlines.resumeheadlines(test_list_item["headlins_input_text"])
     # jobsearch = Jobsearch(driver)
-    jobfreshnessselection = jobsearch.jobsearch("Automation testing, pytest frameworks, Robot frameworks, performance testing", "Hyderabad, Pune, Bangalore")
+    jobfreshnessselection = jobsearch.jobsearch(test_list_item["Skills_input"], test_list_item["Location_input"])
     # jobfreshnessselection = Jobfreshness_selection(driver)
-    jobfreshnessselection.jobfreshness_selection(["testing", "test", "tester", "qa", "automation", "performance", "python"])
+    jobfreshnessselection.jobfreshness_selection(test_list_item["Job_keywords"])
 
 
 
