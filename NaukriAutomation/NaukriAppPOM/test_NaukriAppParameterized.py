@@ -21,6 +21,7 @@ from NaukriAppPOM.LoginPage import Loginpage
 from pytest_html.report import Report
 
 
+
 def test_TestCase_01(test_browser):
     driver = test_browser
     loginpage = Loginpage(driver)
@@ -32,7 +33,7 @@ def test_TestCase_01(test_browser):
     # jobsearch = Jobsearch(driver)
     jobfreshnessselection = jobsearch.jobsearch("Automation testing, pytest frameworks, Robot frameworks, performance testing", "Hyderabad, Pune, Bangalore")
     # jobfreshnessselection = Jobfreshness_selection(driver)
-    jobfreshnessselection.jobfreshness_selection(["testing", "test", "qa", "automation", "performance", "python"])
+    jobfreshnessselection.jobfreshness_selection(["testing", "test", "tester", "qa", "automation", "performance", "python"])
 
 
 
