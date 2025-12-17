@@ -18,7 +18,7 @@ class Jobfreshness_selection():
 
 
 
-    def jobfreshness_selection(self):
+    def jobfreshness_selection(self, job_keywords):
         # *****************Job freshness and selection***********************
         Freshness = self.driver.find_element(*self.job_freshness)
         actions = ActionChains(self.driver)
@@ -38,8 +38,8 @@ class Jobfreshness_selection():
                     job_title = job.text.lower()
                     print("Checking job:", job_title)
 
-                    keywords = ["testing", "test", "qa", "automation", "performance", "python"]
-                    if any(kw in job_title for kw in keywords):
+                    # job_keywords = ["testing", "test", "qa", "automation", "performance", "python"]
+                    if any(kw in job_title for kw in job_keywords):
                         print("Found matching job:", job.text)
 
                         # Scroll to it safely

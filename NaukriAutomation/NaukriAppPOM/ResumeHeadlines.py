@@ -16,12 +16,12 @@ class Resumeheadlines():
         self.save_button = (By.XPATH, "//button[text()='Save']")
         self.headline_success = (By.XPATH, "(//div[@class='msgBox success ']/div/p)[2]")
 
-    def resumeheadlines(self):
+    def resumeheadlines(self, headling_input_text):
         # **************Resume headlines*********************
-        input_text = "#Quality Assurance Engineer #Automation test Engineer # functional testing #Performance testing | 4 Years of Expertise in Manual, Automated testing, pytest & Performance testing | Ensuring Robust Software Solutions"
+        headling_input_text = "#Quality Assurance Engineer #Automation test Engineer # functional testing #Performance testing | 4 Years of Expertise in Manual, Automated testing, pytest & Performance testing | Ensuring Robust Software Solutions"
         self.driver.find_element(*self.headline_edit).click()
         self.driver.find_element(*self.headline_input).clear()
-        self.driver.find_element(*self.headline_input).send_keys(input_text)
+        self.driver.find_element(*self.headline_input).send_keys(headling_input_text)
         self.driver.find_element(*self.save_button).click()
         wait = WebDriverWait(self.driver, 10)
         wait.until(EC.visibility_of_element_located(self.headline_success))

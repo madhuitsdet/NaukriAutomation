@@ -20,12 +20,12 @@ class Loginpage():
         self.viewheading = (By.XPATH, "//div[@class='info__heading']")
 
 
-    def login(self):
+    def login(self, userEmail, userpassword):
         # *****************************Deriver_elements_loginpage**************************************************#
         self.driver.find_element(*self.login_click ).click()
         self.driver.find_element(*self.useremail_input).clear()
-        self.driver.find_element(*self.useremail_input).send_keys("madhuitsdet@gmail.com")
-        self.driver.find_element(*self.userpassword_input).send_keys("Madhu@2000")
+        self.driver.find_element(*self.useremail_input).send_keys(userEmail)
+        self.driver.find_element(*self.userpassword_input).send_keys(userpassword)
         self.driver.find_element(*self.loginbutton_click).click()
         wait = WebDriverWait(self.driver, 10)
         wait.until(EC.presence_of_element_located(self.viewprofile_click))

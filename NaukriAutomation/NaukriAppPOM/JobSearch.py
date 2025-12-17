@@ -18,13 +18,13 @@ class Jobsearch():
         self.search_click = (By.CSS_SELECTOR, "button[class='nI-gNb-sb__icon-wrapper']")
         self.search_Validation = (By.XPATH, "//span[text()='All Filters']")
 
-    def jobsearch(self):
+    def jobsearch(self, Skills_input, Locations_input):
         # ****************Job search ************************************************
-        Skills = "Automation testing, pytest frameworks, Robot frameworks, performance testing"
-        Locations = "Hyderabad, Pune, Bangalore"
+        # Skills_input = "Automation testing, pytest frameworks, Robot frameworks, performance testing"
+        # Locations_input = "Hyderabad, Pune, Bangalore"
         self.driver.find_element(*self.skill_click).click()
         # Job role
-        self.driver.find_element(*self.skill_input).send_keys(Skills)
+        self.driver.find_element(*self.skill_input).send_keys(Skills_input)
         # job experience
         self.driver.find_element(*self.experience_click).click()
         experience = self.driver.find_elements(*self.experience_input)
@@ -37,7 +37,7 @@ class Jobsearch():
                     break
         # Job location
         self.driver.find_element(*self.location_click_input).click()
-        self.driver.find_element(*self.location_click_input).send_keys(Locations)
+        self.driver.find_element(*self.location_click_input).send_keys(Locations_input)
         self.driver.find_element(*self.search_click).click()
         Allfilter = self.driver.find_element(*self.search_Validation).text
         print(Allfilter)

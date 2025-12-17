@@ -24,15 +24,15 @@ from pytest_html.report import Report
 def test_TestCase_01(test_browser):
     driver = test_browser
     loginpage = Loginpage(driver)
-    homeprofilepage = loginpage.login()
+    homeprofilepage = loginpage.login("madhuitsdet@gmail.com", "Madhu@2000")
     # homeprofilepage = Homeprofilepage(driver)
-    resumeheadlines = homeprofilepage.homeprofile()
+    resumeheadlines = homeprofilepage.homeprofile("C:\\Python38-32\\PythonProject\\NaukriApp\\data\\Madhu_Vanga_SDET_v2.pdf")
     # resumeheadlines = Resumeheadlines(driver)
-    jobsearch = resumeheadlines.resumeheadlines()
+    jobsearch = resumeheadlines.resumeheadlines("#Quality Assurance Engineer #Automation test Engineer # functional testing #Performance testing | 4 Years of Expertise in Manual, Automated testing, pytest & Performance testing | Ensuring Robust Software Solutions")
     # jobsearch = Jobsearch(driver)
-    jobfreshnessselection = jobsearch.jobsearch()
+    jobfreshnessselection = jobsearch.jobsearch("Automation testing, pytest frameworks, Robot frameworks, performance testing", "Hyderabad, Pune, Bangalore")
     # jobfreshnessselection = Jobfreshness_selection(driver)
-    jobfreshnessselection.jobfreshness_selection()
+    jobfreshnessselection.jobfreshness_selection(["testing", "test", "qa", "automation", "performance", "python"])
 
 
 

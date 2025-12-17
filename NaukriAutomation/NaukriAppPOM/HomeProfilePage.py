@@ -15,9 +15,9 @@ class Homeprofilepage():
         self.upload_date = (By.XPATH, "//div[@class='updateOn typ-14Regular']")
         self.upload_success = (By.XPATH, "(//div[@class='msgBox success ']/div/p)[2]")
 
-    def homeprofile(self):
+    def homeprofile(self, resume_file_path):
         # *****************************Home page and profile page**************************************
-        resume_file_path = "C:\\Python38-32\\PythonProject\\NaukriApp\\data\\Madhu_Vanga_SDET_v2.pdf"
+        # resume_file_path = "C:\\Python38-32\\PythonProject\\NaukriApp\\data\\Madhu_Vanga_SDET_v2.pdf"
         print(self.driver.title)
         # ************Resume upload**************
         self.driver.find_element(*self.profile_click).click()
