@@ -21,7 +21,7 @@ from NaukriAppPOM.LoginPage import Loginpage
 # from NaukriAppPOM.JobFreshnessSelection import Jobfreshness_selection
 from pytest_html.report import Report
 
-Jsonpath = "C:\\Users\\vangam\Gitstuff_New\\NaukriAutomation\\NaukriAppPOM\\data\\test_NaukriAppParameterized.json"
+Jsonpath = "C:\\Users\\vangam\\Gitstuff_EST\\NaukriAutomation\\NaukriAppPOM\\data\\test_NaukriAppParameterized.json"
 with open(Jsonpath) as f:
     test_data = json.load(f)
     test_list = test_data["data"]
