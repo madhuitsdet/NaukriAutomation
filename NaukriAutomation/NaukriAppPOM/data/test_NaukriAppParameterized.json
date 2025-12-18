@@ -17,6 +17,15 @@
       "Skills_input" : "Automation testing, pytest frameworks, Robot frameworks, performance testing",
       "Location_input" : "Hyderabad, Pune, Bangalore",
       "Job_keywords" : ["testing", "test", "tester", "qa", "automation", "performance", "python"]
+    },
+    {
+      "userEmail" : "madhuitsdet@gmail.com",
+      "userpassword" : "Madhu@2000",
+      "resume_file_pass" : "C:\\Python38-32\\PythonProject\\NaukriApp\\data\\Madhu_Vanga_SDET_v2.pdf",
+      "headlins_input_text" : "#Quality Assurance Engineer #Automation test Engineer # functional testing #Performance testing | 4 Years of Expertise in Manual, Automated testing, pytest & Performance testing | Ensuring Robust Software Solutions",
+      "Skills_input" : "Automation testing, pytest frameworks, Robot frameworks, performance testing",
+      "Location_input" : "Hyderabad, Pune, Bangalore",
+      "Job_keywords" : ["testing", "test", "tester", "qa", "automation", "performance", "python"]
     }
   ]
 
