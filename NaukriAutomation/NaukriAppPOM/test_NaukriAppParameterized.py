@@ -2,6 +2,7 @@ import json
 import time
 from time import sleep
 from datetime import datetime
+import os
 
 import pytest
 from selenium import webdriver
@@ -21,8 +22,10 @@ from NaukriAppPOM.LoginPage import Loginpage
 # from NaukriAppPOM.JobFreshnessSelection import Jobfreshness_selection
 from pytest_html.report import Report
 
-Jsonpath = "C:\\Users\\vangam\\Gitstuff_EST\\NaukriAutomation\\NaukriAppPOM\\data\\test_NaukriAppParameterized.json"
-with open(Jsonpath) as f:
+# Get the directory where the current script is located
+current_dir = os.path.dirname(__file__)
+# Join it with the relative path to the JSON file
+Jsonpath = os.path.join(current_dir, "data", "test_NaukriAppParameterized.json")with open(Jsonpath) as f:
     test_data = json.load(f)
     test_list = test_data["data"]
 
