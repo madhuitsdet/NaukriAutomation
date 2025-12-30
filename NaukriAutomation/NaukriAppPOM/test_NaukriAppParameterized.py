@@ -25,7 +25,8 @@ from pytest_html.report import Report
 # Get the directory where the current script is located
 current_dir = os.path.dirname(__file__)
 # Join it with the relative path to the JSON file
-Jsonpath = os.path.join(current_dir, "data", "test_NaukriAppParameterized.json")with open(Jsonpath) as f:
+Jsonpath = os.path.join(current_dir, "data", "test_NaukriAppParameterized.json")
+with open(Jsonpath) as f:
     test_data = json.load(f)
     test_list = test_data["data"]
 
