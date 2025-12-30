@@ -12,9 +12,12 @@ def pytest_addoption(parser):
 @pytest.fixture(scope="function")
 def test_browser(request):      #request is a default arguent for fixtures
     browser_name = request.config.getoption("--browser_name")
-    if browser_name == "chrome":
+    if browser_name == "chrome_local":
         chromeservice = Service("C:\\Python38-32\\NaukriAutomation\\drivers\\chromedriver.exe")
         driver = webdriver.Chrome(service=chromeservice)
+
+    elif browser_name == "chrome":
+        driver = webdriver.Chrome()
 
     elif browser_name == "firefox":
         firefoxservice = Service("C:\\Python38-32\\NaukriAutomation\\drivers\\geckodriver.exe")
