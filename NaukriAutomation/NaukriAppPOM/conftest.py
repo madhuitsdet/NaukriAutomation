@@ -7,7 +7,7 @@ from selenium.webdriver.firefox.service import Service
 from selenium.webdriver.edge.service import Service
 
 def pytest_addoption(parser):
-    parser.addoption( "--browser_name", action="store", default="chrome", help= "browser selection")
+    parser.addoption( "--browser_name", action="store", default="edge", help= "browser selection")
 
 @pytest.fixture(scope="function")
 def test_browser(request):      #request is a default arguent for fixtures
@@ -25,9 +25,12 @@ def test_browser(request):      #request is a default arguent for fixtures
         options.binary_location = r"C:\Program Files\Mozilla Firefox\firefox.exe"
         driver = webdriver.Firefox(service=firefoxservice, options=options)
 
-    elif browser_name == "edge":
+    elif browser_name == "edge_local":
         edgeservice = Service("C:\\Python38-32\\NaukriAutomation\\drivers\\msedgedriver.exe")
         driver = webdriver.Edge(service=edgeservice)
+
+    elif browser_name == "edge":
+        driver = webdriver.Edge()
 
 
     driver.get("https://www.naukri.com/")
