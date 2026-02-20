@@ -29,7 +29,6 @@ class Resumeheadlines():
         SuccessMassageheadlines = (self.driver.find_element(*self.headline_success).text)
         print(SuccessMassageheadlines)
         assert "Resume Headline has been successfully saved." in SuccessMassageheadlines
-        # time.sleep(120)
         wait.until(EC.visibility_of_element_located((By.CSS_SELECTOR, "div[class='lightbox profileEditDrawer profileUpdatedProLayer model_open flipOpen']")))
         self.driver.find_element(By.CSS_SELECTOR, "div[class='lightbox profileEditDrawer profileUpdatedProLayer model_open flipOpen'] div[class='crossLayer']").click()
         jobsearch = Jobsearch(self.driver)

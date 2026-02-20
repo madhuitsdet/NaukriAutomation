@@ -1,3 +1,4 @@
+import time
 from time import sleep
 from datetime import datetime
 import pytest
@@ -36,6 +37,7 @@ class Homeprofilepage():
         wait.until(EC.visibility_of_element_located(self.upload_success))
         SuccessMassage = (self.driver.find_element(*self.upload_success).text)
         print(SuccessMassage)
+        time.sleep(2)
         assert "Resume has been successfully uploaded" in SuccessMassage
         resumeheadlines = Resumeheadlines(self.driver)
         return resumeheadlines
