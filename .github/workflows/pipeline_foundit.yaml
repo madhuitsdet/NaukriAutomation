@@ -28,7 +28,7 @@ jobs:
 
     - name: Run Tests
       env:
-        # This tells Python to include the current directory in its search path
+        # This tells Python to include the current directory in its search pathafd
         PYTHONPATH: ${{ github.workspace }}
       # Added --headless=new and corrected the file
       run: |
