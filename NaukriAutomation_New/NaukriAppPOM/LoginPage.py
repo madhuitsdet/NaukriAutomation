@@ -1,3 +1,4 @@
+import time
 from time import sleep
 
 import pytest
@@ -11,6 +12,8 @@ from NaukriAppPOM.HomeProfilePage import Homeprofilepage
 class Loginpage():
     def __init__(self, driver):
         self.driver = driver
+        time.sleep(5)
+        self.driver.save_screenshot("debug_headless.png")
         self.login_click  = (By.CSS_SELECTOR, "a[title='Jobseeker Login']")
         self.useremail_input = (By.CSS_SELECTOR, "input[placeholder='Enter your active Email ID / Username']")
         self.userpassword_input = (By.CSS_SELECTOR, "input[placeholder='Enter your password']")
