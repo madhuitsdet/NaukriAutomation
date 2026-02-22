@@ -12,7 +12,7 @@ def pytest_addoption(parser):
     parser.addoption( "--browser_name", action="store", default="edge", help= "browser selection")
 
 @pytest.fixture(scope="function")
-def test_browser(request):      #request is a default arguent for fixtures
+def test_browser(request):      #request is a default arguent for fixtures test
     browser_name = request.config.getoption("--browser_name")
     if browser_name == "chrome":
         driver = webdriver.Chrome()
