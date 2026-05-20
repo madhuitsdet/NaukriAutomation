@@ -18,7 +18,7 @@ class Jobsearch():
         self.search_click = (By.CSS_SELECTOR, "button[class='nI-gNb-sb__icon-wrapper']")
         self.search_Validation = (By.XPATH, "//span[text()='All Filters']")
 
-    def jobsearch(self, Skills_input, Locations_input):
+    def jobsearch(self, Skills_input, Locations_input, Experience):
         # ****************Job search ************************************************
         # Skills_input = "Automation testing, pytest frameworks, Robot frameworks, performance testing"
         # Locations_input = "Hyderabad, Pune, Bangalore"
@@ -32,7 +32,7 @@ class Jobsearch():
         if count > 0:
             for year in experience:
                 print(year.text)
-                if year.text == "4 years":
+                if year.text == Experience:
                     year.click()
                     break
         # Job location

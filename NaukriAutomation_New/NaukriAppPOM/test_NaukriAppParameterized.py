@@ -40,7 +40,7 @@ def test_TestCase_01(test_browser, test_list_item):
     # resumeheadlines = Resumeheadlines(driver)
     jobsearch = resumeheadlines.resumeheadlines(test_list_item["headlins_input_text"])
     # jobsearch = Jobsearch(driver)
-    jobfreshnessselection = jobsearch.jobsearch(test_list_item["Skills_input"], test_list_item["Location_input"])
+    jobfreshnessselection = jobsearch.jobsearch(test_list_item["Skills_input"], test_list_item["Location_input"], test_list_item["Experience"])
     # jobfreshnessselection = Jobfreshness_selection(driver)
     jobfreshnessselection.jobfreshness_selection(test_list_item["Job_keywords"])
 
