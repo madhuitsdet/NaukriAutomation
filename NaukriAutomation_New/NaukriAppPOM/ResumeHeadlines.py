@@ -19,7 +19,7 @@ class Resumeheadlines():
 
     def resumeheadlines(self, headling_input_text):
         # **************Resume headlines*********************
-        headling_input_text = "#Quality Assurance Engineer #Automation test Engineer # functional testing #Performance testing | 4 Years of Expertise in Manual, Automated testing, pytest & Performance testing | Ensuring Robust Software Solutions"
+        # headling_input_text = "#Quality Assurance Engineer #Automation test Engineer # functional testing #Performance testing | 4 Years of Expertise in Manual, Automated testing, pytest & Performance testing | Ensuring Robust Software Solutions"
         self.driver.find_element(*self.headline_edit).click()
         self.driver.find_element(*self.headline_input).clear()
         self.driver.find_element(*self.headline_input).send_keys(headling_input_text)

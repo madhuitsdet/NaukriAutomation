@@ -1,16 +1,6 @@
 {
   "data" : [
     {
-      "userEmail" : "asheervadam.jobs@gmail.com",
-      "userpassword" : "Bunny@123",
-      "resume_file_pass" : "C:\\python32-38\\NaukriAutomation\\NaukriAutomation_New\\NaukriAppPOM\\data\\Asheervadam.Telecom_profile.pdf",
-      "headlins_input_text" : "#Telecom Design Engineering, #Fiber network Design Engineering, #telecom design & #quality control Engineering",
-      "Skills_input" : " FTTH network design, autocad, ArcGIS/ QGIS, Telecom networking planning,",
-      "Location_input" : "Hyderabad, Pune, Bangalore",
-      "Experience" : "2 years",
-      "Job_keywords" : ["telecom design engineer", "fiber network design", "telecom engineer", "network planning engineer"]
-    },
-    {
       "userEmail" : "madhuitsdet@gmail.com",
       "userpassword" : "Madhu@2000",
       "resume_file_pass" : "C:\\python32-38\\NaukriAutomation\\NaukriAutomation_New\\NaukriAppPOM\\data\\Madhu_Vanga_SDET_v6.pdf",
@@ -19,6 +9,16 @@
       "Location_input" : "Hyderabad, Pune, Bangalore",
       "Experience" : "4 years",
       "Job_keywords" : ["testing", "test", "tester", "qa", "automation", "performance", "python"]
+    },
+    {
+      "userEmail" : "asheervadam.jobs@gmail.com",
+      "userpassword" : "Bunny@123",
+      "resume_file_pass" : "C:\\python32-38\\NaukriAutomation\\NaukriAutomation_New\\NaukriAppPOM\\data\\Asheervadam.Telecom_profile.pdf",
+      "Skills_input" : " FTTH network design, autocad, ArcGIS/ QGIS, Telecom networking planning,",
+      "Location_input" : "Hyderabad, Pune, Bangalore",
+      "headlins_input_text" : "#Telecom Design Engineering, #Fiber network Design Engineering, #telecom design & #quality control Engineering",
+      "Experience" : "2 years",
+      "Job_keywords" : ["telecom design engineer", "fiber network design", "telecom engineer", "network planning engineer"]
     },
     {
       "userEmail" : "anupamam2212000@gmail.com",
